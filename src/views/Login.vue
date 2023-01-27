@@ -7,10 +7,10 @@
       <el-form ref="ruleFormRef" :model="ruleForm" status-icon :rules="rules" label-width="80px" class="demo-ruleForm"
         :label-position="labelLeft?'left':'top'">
         <el-form-item label="账号：" prop="username">
-          <el-input v-model="ruleForm.username" type="text" autocomplete="off" :prefix-icon="Avatar" />
+          <el-input v-model="ruleForm.username" type="text" autocomplete="off" :prefix-icon="User" />
         </el-form-item>
         <el-form-item label="密码：" prop="password">
-          <el-input v-model="ruleForm.password" type="password" autocomplete="off" :prefix-icon="Grid" />
+          <el-input v-model="ruleForm.password" type="password" autocomplete="off" :prefix-icon="Lock" />
         </el-form-item>
         <el-form-item class="btn">
 
@@ -26,7 +26,7 @@
 import axios from '@/tools/axios'
 import { reactive, ref } from 'vue'
 import { ElMessage, FormInstance } from 'element-plus'
-import { Avatar, Grid } from '@element-plus/icons-vue'
+import { User, Lock } from '@element-plus/icons-vue'
 import { useStore } from '@/store/useStore'
 import { storeToRefs } from 'pinia';
 import { useRouter } from 'vue-router'
