@@ -13,7 +13,8 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "element-plus/global"
     ],
     "paths": {
       "@/*": [
@@ -32,7 +33,9 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "src/tools/pinia.js",
+    "tests/**/*.tsx",
+    "src/tools/pinia.js"
   ],
   "exclude": [
     "node_modules"
