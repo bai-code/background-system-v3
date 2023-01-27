@@ -8,7 +8,8 @@ import { createPinia } from 'pinia'
 
 const app = createApp(App)
 
-app.use(ElementPlus)
-app.use(createPinia())
+
+app.use(ElementPlus) // 使用element-plus
+app.use(createPinia()) // 创建仓库
 
 app.use(router).mount('#app')
