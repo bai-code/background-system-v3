@@ -9,7 +9,7 @@ let token : string|null = ''
 
 intance.interceptors.request.use(config => {
   if (!token) {
-    token = localStorage.getItem('token')||''
+    token = sessionStorage.getItem('token')||''
     config.headers['Authorization'] = token
   }
   return config

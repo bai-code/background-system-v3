@@ -81,7 +81,7 @@ const submitForm = (formEl: FormInstance | undefined) => {
       const { data } = await axios.post('/login', { username, password })
 
       if (data && data.token) {
-      localStorage.setItem('token', data.token)
+      sessionStorage.setItem('token', data.token)
         ElMessage({
           message: '登录成功',
           type: 'success'
@@ -117,7 +117,7 @@ const resetForm = (formEl: FormInstance | undefined) => {
 
   .el-col.content {
     background: #fff;
-    padding: 80px 40px 0;
+    padding: 80px 40px 40px;
     border-radius: 5px;
     max-width: 550px;
     min-width: 300px;
