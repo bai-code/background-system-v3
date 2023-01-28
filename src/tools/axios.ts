@@ -5,13 +5,14 @@ const intance = axios.create({
   timeout: 10000
 })
 
-let token : string|null = ''
+let token: string | null = ''
 
 intance.interceptors.request.use(config => {
   if (!token) {
-    token = sessionStorage.getItem('token')||''
-    config.headers['Authorization'] = token
+    token = sessionStorage.getItem('token') || ''
   }
+  config.headers['Authorization'] = token
+
   return config
 })
 

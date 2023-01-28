@@ -4,7 +4,7 @@
     @close="handleClose" text-color="#aaa">
     <el-menu-item index="/home/welcome">
       <el-icon>
-      <i class="iconfont icon-fireworks"></i>
+        <i class="iconfont icon-fireworks"></i>
       </el-icon>
       <template #title>欢迎</template>
     </el-menu-item>
@@ -28,15 +28,12 @@
 
 <script setup lang="ts">
 import {
-  Document,
   Menu as IconMenu,
   Location,
-  Setting,
 } from '@element-plus/icons-vue'
-import { useStore } from '@/store/useStore'
-import { onMounted, shallowRef, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import axios from '@/tools/axios'
-// import { useRoute } from 'vue-router'
+import type { Ref } from 'vue'
 
 // 父级数据
 defineProps({
@@ -48,12 +45,11 @@ defineProps({
 
 // const route = useRoute()
 
-const menusList = ref<array>([])
+const menusList = ref<any>([])
 // 获取菜单列表
 const getMenuList = async () => {
   const { data = [] } = await axios.get('/menus')
   menusList.value = data
-  console.log(data);
 
 }
 

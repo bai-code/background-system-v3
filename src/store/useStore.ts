@@ -11,12 +11,17 @@ export const useStore = defineStore('main', {
     labelLeft: true,
   }),
   actions: {
-    async getInfo(path:string, method:string = 'get', body?:object) {
-      console.log(method, path);
-      if(method==='get'){
-        const res = await axios.get(path)
-        console.log(res);
-      }
-    }
+    // async getInfo(path: string, method: string = 'get', body?: object) {
+    //   console.log(method, path);
+    //   if (method === 'get' || method === 'put') {
+    //     const res = await axios.get(path)
+    //     console.log(res);
+    //   } else {
+    //     const res = await axios.put(path, body)
+    //     console.log(res);
+
+    //   }
+
+    // }
   }
 })
