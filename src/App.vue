@@ -15,7 +15,7 @@ const store = useStore()
 
 // 页面大小改变
 watch(screenW, (w) => {
-  if (w < 578) {
+  if (w < 768) {
     store.labelLeft = false
   }else {
     store.labelLeft = true
@@ -44,5 +44,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  user-select: none;
 }
 </style>
