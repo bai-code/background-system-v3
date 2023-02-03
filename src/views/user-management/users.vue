@@ -31,7 +31,7 @@
       <el-table-column label="操作" width="200">
         <template v-slot="scope">
           <el-tooltip class="box-item" effect="light" content="编辑" placement="top">
-            <el-button type="primary" @click="editInfo(scope.row)">
+            <el-button type="primary" size="small" @click="editInfo(scope.row)">
               <el-icon>
                 <Edit />
               </el-icon>
@@ -39,14 +39,14 @@
           </el-tooltip>
 
           <el-tooltip class="box-item" effect="light" content="删除" placement="top">
-            <el-button type="danger" @click="deleteUser(scope.row)">
+            <el-button type="danger" size="small" @click="deleteUser(scope.row)">
               <el-icon>
                 <Delete />
               </el-icon>
             </el-button>
           </el-tooltip>
           <el-tooltip class="box-item" effect="light" content="设置" placement="top">
-            <el-button type="warning" @click="spreadDialog(scope.row)">
+            <el-button type="warning" size="small" @click="spreadDialog(scope.row)">
               <el-icon>
                 <Setting />
               </el-icon>

@@ -1,5 +1,5 @@
 <template>
-  <el-dialog title="添加用户" v-model="isVisible" :show-close="false" width="450" @submit-event="submitEvent">
+  <el-dialog title="添加用户" v-model="isVisible" :show-close="false" width="450" >
     <el-form ref="ruleFormRef" :model="ruleForm" status-icon :rules="rules" label-width="80px" class="demo-ruleForm">
       <el-form-item label="用户名" prop="username">
         <el-input v-model="ruleForm.username" autocomplete="off" />
@@ -130,9 +130,6 @@ const resetForm = (formEl: FormInstance | undefined) => {
 }
 
 
-const submitEvent = () => {
-
-}
 
 </script>
 

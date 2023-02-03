@@ -25,7 +25,6 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'users',
-        // redirect:{name:'users'},
         children: [
           {
             path: 'users',
@@ -36,13 +35,17 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'rights',
-        name: 'rights',
         redirect: { name: 'roles' },
         children: [
           {
             path: 'roles',
             name: 'roles',
             component: roles
+          },
+          {
+            path: 'rights',
+            name: 'rights',
+            component: rights
           },
         ]
       },
